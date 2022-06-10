@@ -1,9 +1,15 @@
 {
-    "name": "my-webpack-project",
+    "name": "muddyrain-tools",
     "version": "1.0.0",
     "description": "A multi-type tool function library",
     "main": "index.js",
     "author": "Muddyrain",
+    "keywords": [
+        "tools",
+        "js",
+        "javascript",
+        "typescript"
+    ],
     "license": "MIT",
     "devDependencies": {
         "@webpack-cli/generators": "^2.4.2",
