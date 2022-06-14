@@ -18,4 +18,4 @@ export declare const getUrlParameters: (URL: string) => string;
  * @returns {String | Object} `传递字符串返回字符串值，传递字符串数组返回对应键值队`
  * 用法: getUrlParams('name' | ['name', 'age'])
  */
-export declare const getUrlParams: (names: string | string[], url?: string) => string | object;
+export declare function getUrlParams(names: string | string[], url?: string): string | object;

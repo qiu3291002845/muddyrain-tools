@@ -42,10 +42,10 @@ export const getUrlParameters = (URL: string): string => {
  * @returns {String | Object} `传递字符串返回字符串值，传递字符串数组返回对应键值队`
  * 用法: getUrlParams('name' | ['name', 'age'])
  */
-export const getUrlParams = (
+export function getUrlParams(
   names: string | string[],
   url?: string
-): string | object => {
+): string | object {
   if (!names) throw 'names 字段未定义'
   const type = Object.prototype.toString.call(names)
   const search =

@@ -25,7 +25,6 @@ export const timeFromDate = (date: Date): string =>
 
 // 封装日期格式化函数
 type configType = Record<string, number | string>
-const date = new Date('2021-4-12 10:22:22')
 /**
  *
  * @param  { Date } date `日期类型 new Date()`
@@ -36,7 +35,7 @@ const date = new Date('2021-4-12 10:22:22')
  */
 export const dateFormat = (
   date: Date,
-  format = 'YYYY-MM-DD HH:mm:ss'
+  format = 'YYYY-MM-dd HH:mm:ss'
 ): string => {
   // 补零操作
   const paddingZero = (d: number): string | number => (d < 10 ? '0' + d : d)
@@ -48,21 +47,21 @@ export const dateFormat = (
     MM: paddingZero(date.getMonth() + 1),
     M: date.getMonth() + 1,
     WW: '0' + date.getDay(),
-    W: date.getDay(),
     ww: '0' + date.getDay(),
+    W: date.getDay(),
     w: date.getDay(),
-    d: date.getDate(),
-    D: date.getDate(),
     DD: paddingZero(date.getDate()),
     dd: paddingZero(date.getDate()),
+    D: date.getDate(),
+    d: date.getDate(),
     HH: paddingZero(date.getHours()),
     H: date.getHours(),
     hh: paddingZero(institutions_12(date.getHours())),
     h: institutions_12(date.getHours()),
     mm: paddingZero(date.getMinutes()),
     m: date.getMinutes(),
-    s: paddingZero(date.getSeconds()),
-    ss: date.getSeconds(),
+    ss: paddingZero(date.getSeconds()),
+    s: date.getSeconds(),
   }
   let key: keyof configType
   for (key in config) {
@@ -70,6 +69,3 @@ export const dateFormat = (
   }
   return format
 }
-console.log(dateFormat(date)) // 2021-4-12 10:22:22
-console.log(dateFormat(date, 'YYYY年MM月DD日')) // 2021年4月12日
-console.log(dateFormat(date, 'YYYY年MM月DD日 HH时mm分ss秒')) // 2021年4月12日 10时22分22秒

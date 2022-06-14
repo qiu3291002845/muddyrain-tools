@@ -28,5 +28,7 @@
   },
   "include": ["src/**/*.ts", "typings.d.ts"], // 要打包的文件
   "exclude": ["node_modules", "*.test.ts"],
-  "files": ["src/index.ts"]
+  "resolve": {
+    "extensions": [".ts", ".js"]
+  }
 }

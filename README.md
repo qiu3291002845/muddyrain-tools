@@ -1,15 +1,20 @@
-# 🚀 Welcome to your new awesome project!
+# 🚀 Welcome to Install Muddyrain-tools
 
-This project has been created using **webpack-cli**, you can now run
 
 ```
-npm run build
+npm install --save-dev muddyrain-tools
 ```
 
 or
 
 ```
-yarn build
+yarn add --save-dev muddyrain-tools
 ```
 
-to bundle your application
+
+use
+```
+import { string } from "muddyrain-tools"
+// 大写字符串 -- 将字符串转化为大小字母
+string.capitalize("MUDDYRAIN_TOOLS")
+```
